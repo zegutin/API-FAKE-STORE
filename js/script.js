@@ -20,9 +20,8 @@ function exibir(data){
 
                         <div class="informacao">
                             <h2>${data.title}</h2>
-                            <p>${data.description}</p>
                             <p>R$${data.price.toFixed(2)}</p>
-                            <input type="button" value="COMPRAR">
+                            <a href="./produto.html"><input type="button" value="COMPRAR"></a>
                         </div>
                 </div>
                 `
