@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Young+Serif&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     list-style: none;
@@ -8,16 +8,16 @@
     font-family: 'Young Serif', serif;
 }
 
-body{
+body {
     background-image: url(../img/background.jpg);
     background-size: cover;
     backdrop-filter: blur(1px);
     background-attachment: fixed;
 }
 
-header{
+header {
     width: 100%;
-    background-color: rgb(255, 255, 255 ,0.3);
+    background-color: rgb(255, 255, 255, 0.3);
     box-shadow: 0 3px 50px 0 rgba(31, 38, 135, 0.35);
     backdrop-filter: blur(1.5px);
     border: 1 px solid rgba(255, 255, 255, 0.18);
@@ -26,21 +26,21 @@ header{
     top: 0;
 }
 
- .logo-icons{
+.logo-icons {
     display: flex;
     justify-content: space-between;
     padding-top: 3vh;
     justify-content: center;
     align-items: center;
-} 
+}
 
-.logo{
+.logo {
     text-align: center;
     font-size: 30px;
     color: #000;
 }
 
-.icons{
+.icons {
     position: absolute;
     display: flex;
     color: #000;
@@ -52,48 +52,48 @@ header{
     padding: 10px;
 }
 
-.icons i{
+.icons i {
     transition: .5s;
 }
 
 
-.icons .fa-whatsapp{
+.icons .fa-whatsapp {
     font-size: 25px;
 }
 
-.icons .fa-whatsapp:hover{
+.icons .fa-whatsapp:hover {
     transform: translate(0px, -5px);
     color: #40C351;
 }
 
-.icons .fa-phone:hover{
+.icons .fa-phone:hover {
     transform: translate(0px, -5px);
     color: #039BE5;
 }
 
-.icons .fa-cart-shopping:hover{
+.icons .fa-cart-shopping:hover {
     transform: translate(0px, -5px);
     color: #009688;
 }
 
-ul{
+ul {
     padding-top: 9vh;
     text-align: center;
     padding-bottom: 3vh;
 }
 
-ul li{
+ul li {
     display: inline;
     padding-left: 25px;
 }
 
-ul li a{
+ul li a {
     text-align: center;
     color: #000;
     position: relative;
 }
 
-ul li a::after{
+ul li a::after {
     content: '';
     width: 0;
     height: 3px;
@@ -105,12 +105,12 @@ ul li a::after{
     transition: 0.5s ease;
 }
 
-ul li a:hover::after{
+ul li a:hover::after {
     width: 100%;
 }
 
 
-.container{
+.container {
     display: flex;
     padding: 100px;
     gap: 50px;
@@ -121,23 +121,23 @@ ul li a:hover::after{
 
 
 
-.informacao{
+.informacao {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.card{
+.card {
     background-color: rgb(255, 255, 255);
     width: 300px;
     height: 400px;
     border-radius: 12px;
     box-shadow: 4px 4px 12px #aaaa;
-    
+
 }
 
-.card h2{
+.card h2 {
     font-family: 'Courier New', Courier, monospace;
     margin-left: 10px;
     margin-right: 10px;
@@ -150,7 +150,7 @@ ul li a:hover::after{
     max-height: 20px;
 }
 
-.card p{
+.card p {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
     font-weight: bolder;
@@ -162,7 +162,7 @@ ul li a:hover::after{
     max-width: 280px;
 }
 
-.card img{
+.card img {
     width: 100%;
     height: 250px;
     border-top-right-radius: 12px;
@@ -170,29 +170,29 @@ ul li a:hover::after{
     object-fit: contain;
 }
 
-.card input{
+.card input {
     border-radius: 12px;
     margin-top: 20px;
     padding: 3px;
     box-shadow: 5px 5px 10px #5e5e5e;
-    transition: 0.3s;   
+    transition: 0.3s;
 }
 
-.card input:hover{
+.card input:hover {
     background-color: #c2c2c2;
     transform: translate(-0%, 1px);
     box-shadow: 2px 2px 5px #5e5e5e;
 }
 
 
-main{
+main {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100vw;
 }
 
-.card-produto{
+.card-produto {
     top: 50%;
     transform: translate(0px, 30px);
     display: flex;
@@ -204,7 +204,7 @@ main{
     box-shadow: 0 5px 10px #000;
 }
 
-.card-produto img{
+.card-produto img {
     padding: 10px;
     width: 50%;
     height: 96%;
@@ -212,17 +212,69 @@ main{
     border-radius: 50px 0px 0px 50px;
 }
 
-.card-produto .global{
+.card-produto .global {
     width: 50%;
 }
 
-.card-produto .titulo{
-    padding-top: 5%;
+.card-produto .titulo {
+    padding-top: 20%;
     text-align: center;
 }
 
-.card-produto .preco{
+.card-produto .descricao {
+    padding-top: 5%;
+    padding-left: 10%;
+    padding-right: 5%;
+}
+
+.card-produto .preco {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 30px;
     font-weight: bold;
+    text-align: center;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 5%;
+}
+
+.card-produto input {
+    text-align: center;
+    margin-top: 8px;
+}
+
+.card-produto .buy {
+    width: 60%;
+    margin: 30px auto 0px;
+    border-radius: 12px;
+}
+
+.card-produto .addCart {
+    width: 60%;
+    border-radius: 12px;
+    margin: 5px auto;
+}
+
+.campo-quantidade .quantidade {
+    text-align: center;
+}
+
+.numero-quantidade {
+    border-radius: 30px;
+    width: 30%;
+    margin: 0 auto;
+}
+
+
+.campo-quantidade {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin: 30px auto;
+}
+
+
+.campo-quantidade input:hover{
+    background-color: #c2c2c2;
+    transform: translate(-0%, 1px);
+    box-shadow: 2px 2px 5px #5e5e5e;
 }
