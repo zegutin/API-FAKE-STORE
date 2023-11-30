@@ -1,36 +1,52 @@
 const api = "https://fakestoreapi.com/products"
 
 fetch(api)
-.then((data)=>data.json())
-.then(data=>{
-    exibir(data)
-})
+    .then((data) => data.json())
+    .then(data => {
+        exibir(data)
+    })
 
-function exibir(data){
+function exibir(data) {
     const container = document.querySelector('.container')
 
     data.forEach(data => {
-        
-    const card = document.createElement('card')
-    card.classList.add('card')
 
-    card.innerHTML=`
-    <div class="">
+        const card = document.createElement('card')
+        card.classList.add('card')
+
+        card.innerHTML = `
+    <div id="${data.id}" class="">
                     <img src="${data.image}" alt="">
 
                         <div class="informacao">
                             <h2>${data.title}</h2>
                             <p>R$${data.price.toFixed(2)}</p>
-                            <a href="./produto.html"><input type="button" value="COMPRAR"></a>
+                            <input class="btnBuy" type="button" value="COMPRAR">
                         </div>
                 </div>
                 `
-                container.appendChild(card)
+        container.appendChild(card)
+       
+    });
+
+    const btnBuy = document.querySelectorAll(".btnBuy")
+
+    btnBuy.forEach((button) => {
+        button.addEventListener('click', ()=>{
+            const idProduct = button.parentElement.parentElement.id
+
+            window.location.href = `produto.html?id=${idProduct}`
+            console.log(idProduct);
+        })
     });
 
 
-
 }
+
+
+
+
+
 
 /* 
 
@@ -42,6 +58,12 @@ dar o conteudo para o filho
 e colocar o filho dentro do pai
 
 */
+
+
+
+
+
+
 
 
 

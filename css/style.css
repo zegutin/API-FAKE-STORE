@@ -25,6 +25,9 @@ header {
     z-index: 100;
     top: 0;
 }
+a{
+    color: #000;
+}
 
 .logo-icons {
     display: flex;
@@ -38,6 +41,11 @@ header {
     text-align: center;
     font-size: 30px;
     color: #000;
+    transition: 0.5s;
+}
+
+.logo:hover{
+    transform: scale(1.1);
 }
 
 .icons {
@@ -192,11 +200,13 @@ main {
     width: 100vw;
 }
 
+
 .card-produto {
+    margin-top: 100px;
     top: 50%;
     transform: translate(0px, 30px);
     display: flex;
-    position: absolute;
+
     background-color: white;
     width: 1200px;
     height: 600px;
@@ -208,73 +218,78 @@ main {
     padding: 10px;
     width: 50%;
     height: 96%;
-    object-fit: cover;
+    object-fit: contain;
     border-radius: 50px 0px 0px 50px;
 }
 
 .card-produto .global {
     width: 50%;
+    padding: 3%;
 }
 
 .card-produto .titulo {
-    padding-top: 20%;
-    text-align: center;
+    font-size: 40px;
+    display: flex;
+    margin: 0 auto;
+}
+
+.card-produto .categoria{
+    padding-bottom: 3%;
+    color: #5e5e5e;
 }
 
 .card-produto .descricao {
-    padding-top: 5%;
-    padding-left: 10%;
-    padding-right: 5%;
+    padding: 5% 0;
 }
 
 .card-produto .preco {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 30px;
+    font-size: 40px;
     font-weight: bold;
-    text-align: center;
-    padding-left: 10%;
-    padding-right: 10%;
-    padding-top: 5%;
+    padding: 5% 0;
+}
+
+.rating{
+    font-size: 25px;
 }
 
 .card-produto input {
     text-align: center;
-    margin-top: 8px;
-}
-
-.card-produto .buy {
-    width: 60%;
-    margin: 30px auto 0px;
-    border-radius: 12px;
-}
-
-.card-produto .addCart {
-    width: 60%;
-    border-radius: 12px;
-    margin: 5px auto;
-}
-
-.campo-quantidade .quantidade {
-    text-align: center;
-}
-
-.numero-quantidade {
-    border-radius: 30px;
-    width: 30%;
-    margin: 0 auto;
 }
 
 
 .campo-quantidade {
     display: flex;
-    flex-direction: column;
-    width: 60%;
     margin: 30px auto;
+    justify-content: space-between;
 }
-
 
 .campo-quantidade input:hover{
     background-color: #c2c2c2;
     transform: translate(-0%, 1px);
     box-shadow: 2px 2px 5px #5e5e5e;
+}
+
+.numero-quantidade {
+    border-radius: 30px;
+    width: 30%;
+}
+
+#cep{
+    border-radius: 12px;
+}
+
+
+.card-produto .btns {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+.card-produto input[type='button'] {
+    width: 250px;
+    border-radius: 12px;
+    padding: 4px 12px;
 }
